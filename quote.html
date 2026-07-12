@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Quote | KamtexSolar</title>
+<meta name="description" content="Tell us what you need to power. Most KamtexSolar systems go from enquiry to on-site in 2 to 4 weeks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/logo.png">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="assets/logo.png" alt="KamtexSolar, your one-stop solar provider"></a>
+    <button class="nav-toggle" aria-label="Toggle menu">Menu</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="quote.html" class="btn btn-primary">Request a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h1>Request a quote</h1>
+      <p style="margin-top:14px;font-size:1.08rem">Three quick questions, then we take it from there. Most systems go from enquiry to on-site in 2 to 4 weeks.</p>
+    </div>
+
+    <div class="quote-grid">
+      <div>
+        <div class="qprogress" aria-hidden="true"><i class="done"></i><i></i><i></i></div>
+
+        <form id="qform" novalidate>
+          <div class="qstep on" data-step="1">
+            <h2>What do you need to power?</h2>
+            <p>Pick the closest match. We handle everything else in the conversation.</p>
+            <div class="qoptions" role="radiogroup" aria-label="Application type">
+              <label><input type="radio" name="application" value="Container unit / rest area">Container unit / rest area<small>Lighting, cooling and power for site welfare facilities</small></label>
+              <label><input type="radio" name="application" value="Site lighting">Site lighting<small>Street, batten, flood and high-mast solar lighting</small></label>
+              <label><input type="radio" name="application" value="Monitoring / signage / warning systems">Monitoring, signage or warning systems<small>VMS, speed indicators, height warning, CCTV</small></label>
+              <label><input type="radio" name="application" value="Remote power generation / storage">Remote power generation or storage<small>Battery banks, hybrid systems, custom loads</small></label>
+              <label><input type="radio" name="application" value="Maintenance / repair of existing system">Maintenance or repair<small>Troubleshooting and refurbishment of existing systems</small></label>
+              <label><input type="radio" name="application" value="Others">Others<small>An installation that doesn't match our previous work</small></label>
+            </div>
+            <p class="qerror" data-for="1">Please pick an application so we can route your enquiry.</p>
+            <div class="qnav">
+              <button type="button" class="btn btn-primary" data-next>Continue</button>
+            </div>
+          </div>
+
+          <div class="qstep" data-step="2">
+            <h2>Tell us about the site</h2>
+            <p>Rough answers are fine. This helps us arrive at the first call prepared.</p>
+            <div class="qfield">
+              <label for="q-industry">Industry</label>
+              <select id="q-industry" name="industry">
+                <option>Construction</option>
+                <option>Aviation, Aerospace &amp; Defence</option>
+                <option>Maritime &amp; Logistics</option>
+                <option>Security &amp; Monitoring</option>
+                <option>Testing &amp; Certification</option>
+                <option>Agriculture / Education</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="qfield">
+              <label for="q-location">Site location</label>
+              <input id="q-location" name="location" type="text" placeholder="e.g. Tuas construction site, PSA Brani, overseas">
+            </div>
+            <div class="qfield">
+              <label for="q-timeline">When do you need power on-site?</label>
+              <select id="q-timeline" name="timeline">
+                <option>As soon as possible</option>
+                <option>Within a month</option>
+                <option>1 to 3 months</option>
+                <option>Exploring options</option>
+              </select>
+            </div>
+            <div class="qfield">
+              <label for="q-details">Anything else we should know? <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+              <textarea id="q-details" name="details" rows="3" placeholder="Loads to power, compliance requirements, site constraints"></textarea>
+            </div>
+            <div class="qnav">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Continue</button>
+            </div>
+          </div>
+
+          <div class="qstep" data-step="3">
+            <h2>Where should we send the quote?</h2>
+            <p>We respond to quote requests within 1 business day.</p>
+            <div id="qdirect" style="display:none;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg-soft);padding:14px 18px;margin-bottom:20px;font-size:0.95rem">
+              Sounds like something new for us, we like that. Fill in your details below, or email us directly at <a href="mailto:Kamtex@KamtexIndustries.com?subject=Quote%20Request%3A%20New%20installation%20type"><b>Kamtex@KamtexIndustries.com</b></a> and describe your installation.
+            </div>
+            <div class="qfield">
+              <label for="q-name">Name</label>
+              <input id="q-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="qfield">
+              <label for="q-company">Company</label>
+              <input id="q-company" name="company" type="text" autocomplete="organization">
+            </div>
+            <div class="qfield">
+              <label for="q-email">Work email</label>
+              <input id="q-email" name="email" type="email" autocomplete="email" required>
+              <p class="hint">Used only to reply to this enquiry. We do not send marketing email.</p>
+            </div>
+            <div class="qfield">
+              <label for="q-phone">Phone <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+              <input id="q-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <p class="qerror" data-for="3">Please fill in your name and a valid email address.</p>
+            <div class="qnav">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="submit" class="btn btn-primary">Send Quote Request</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="qsuccess" id="qsuccess">
+          <h2>Your email is ready to send</h2>
+          <p>We opened your email app with the request below addressed to <b>kamtex@kamtexindustries.com</b>. Hit send and we will reply within 1 business day. If nothing opened, copy the summary and email it to us directly.</p>
+          <pre id="qsummary"></pre>
+          <a class="btn btn-ghost" href="index.html">Back to Home</a>
+        </div>
+      </div>
+
+      <aside class="qside">
+        <div class="qside-facts">
+          <h3>What happens next</h3>
+          <ul class="checklist">
+            <li>We reply within 1 business day</li>
+            <li>An engineer scopes your loads and site conditions</li>
+            <li>You get a spec and quote, typically within the week</li>
+            <li>Most systems are on-site 2 to 4 weeks from enquiry</li>
+          </ul>
+        </div>
+        <blockquote class="quote">
+          &ldquo;We see Kamtex as a one-stop solution. Their documentation saved us plenty of time and complied with all stakeholders.&rdquo;
+          <footer>Mr Lim, Project Manager</footer>
+        </blockquote>
+        <div class="qside-facts">
+          <h3>Trusted on demanding sites</h3>
+          <p style="font-size:0.92rem">Ministry of Defence, Changi Airport Group, PSA terminals, PUB and NTU projects, delivered with zero recorded downtime.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <img class="foot-logo" src="assets/logo.png" alt="KamtexSolar">
+      <p>37 Tannery Lane, #07-02 Tannery House,<br>Singapore 347790</p>
+      <p style="margin-top:10px"><a href="mailto:kamtex@kamtexindustries.com">kamtex@kamtexindustries.com</a></p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="products.html">Products</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="index.html#custom">Customised Solutions</a>
+      <a href="index.html#maintenance">Maintenance &amp; Repair</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#history">Our History</a>
+      <a href="https://solar.kamtexindustries.com">solar.kamtexindustries.com</a>
+    </div>
+    <div class="legal">KamtexSolar, a division of Kamtex Industries. Prototype website, content subject to confirmation.</div>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function () {
+  document.querySelector('.nav-links').classList.toggle('open');
+});
+
+(function () {
+  var form = document.getElementById('qform');
+  var steps = Array.prototype.slice.call(form.querySelectorAll('.qstep'));
+  var bars = document.querySelectorAll('.qprogress i');
+  var current = 0;
+  var skippedSite = false;
+
+  function isOthers() {
+    var sel = form.querySelector('input[name="application"]:checked');
+    return sel && sel.value === 'Others';
+  }
+
+  function show(i) {
+    current = i;
+    steps.forEach(function (s, k) { s.classList.toggle('on', k === i); });
+    bars.forEach(function (b, k) { b.classList.toggle('done', k <= i); });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  form.querySelectorAll('.qoptions label').forEach(function (label) {
+    label.addEventListener('click', function () {
+      form.querySelectorAll('.qoptions label').forEach(function (l) { l.classList.remove('sel'); });
+      label.classList.add('sel');
+      document.querySelector('.qerror[data-for="1"]').classList.remove('show');
+    });
+  });
+
+  form.querySelectorAll('[data-next]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (current === 0 && !form.querySelector('input[name="application"]:checked')) {
+        document.querySelector('.qerror[data-for="1"]').classList.add('show');
+        return;
+      }
+      if (current === 0 && isOthers()) {
+        skippedSite = true;
+        document.getElementById('qdirect').style.display = 'block';
+        show(2);
+        return;
+      }
+      skippedSite = false;
+      document.getElementById('qdirect').style.display = 'none';
+      show(current + 1);
+    });
+  });
+  form.querySelectorAll('[data-back]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (current === 2 && skippedSite) { show(0); return; }
+      show(current - 1);
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = form.querySelector('#q-name').value.trim();
+    var email = form.querySelector('#q-email').value.trim();
+    if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      document.querySelector('.qerror[data-for="3"]').classList.add('show');
+      return;
+    }
+    var v = function (sel) { var el = form.querySelector(sel); return el ? el.value.trim() : ''; };
+    var app = form.querySelector('input[name="application"]:checked');
+    var lines = [
+      'Quote request from ' + name + (v('#q-company') ? ' (' + v('#q-company') + ')' : ''),
+      '',
+      'Application: ' + (skippedSite ? 'Others (new installation type, details to follow)' : (app ? app.value : 'Not specified')),
+      'Industry: ' + (skippedSite ? 'Not specified' : v('#q-industry')),
+      'Site location: ' + (skippedSite ? 'Not specified' : (v('#q-location') || 'Not specified')),
+      'Timeline: ' + (skippedSite ? 'Not specified' : v('#q-timeline')),
+      'Details: ' + (skippedSite ? 'To be discussed' : (v('#q-details') || 'None')),
+      '',
+      'Contact: ' + email + (v('#q-phone') ? ' / ' + v('#q-phone') : '')
+    ];
+    var body = lines.join('\n');
+    var subject = 'Quote Request: ' + (skippedSite ? 'New installation type' : (app ? app.value : 'Solar system enquiry'));
+    document.getElementById('qsummary').textContent = 'To: kamtex@kamtexindustries.com\nSubject: ' + subject + '\n\n' + body;
+    form.style.display = 'none';
+    document.querySelector('.qprogress').style.display = 'none';
+    document.getElementById('qsuccess').classList.add('on');
+    window.location.href = 'mailto:kamtex@kamtexindustries.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
