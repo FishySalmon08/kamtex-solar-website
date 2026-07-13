@@ -8,6 +8,16 @@ Static prototype site for Kamtex Solar (off-grid B2B solar, Singapore). No build
 - `quote.html` - multi-step quote request form (composes an email to kamtex@kamtexindustries.com)
 - `assets/` - logo and photos extracted from the Kamtex pitch and monthly case-study decks
 
+## Local preview
+
+From this folder, run:
+
+```
+python -m http.server 8741
+```
+
+then open `localhost:8741` in a browser.
+
 ## Editing
 
 Edit any file, then:
