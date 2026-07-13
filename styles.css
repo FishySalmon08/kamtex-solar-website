@@ -236,12 +236,14 @@ section { padding: 88px 0; }
 .cs-flip-card {
   border: 1px solid var(--line); border-radius: 14px; background: #f7fafc;
   padding: 20px 34px 24px; transform-style: preserve-3d;
+  display: grid;
 }
 .cs-flip-card.flip { animation: cardflip 0.45s ease; }
 @keyframes cardflip { from { transform: rotateY(90deg); opacity: 0; } to { transform: none; opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .cs-flip-card.flip { animation: none; } }
-.cs-pane { display: none; }
-.cs-pane.on { display: block; }
+/* Panes stack in the same grid cell so the card always sizes to the tallest one */
+.cs-pane { grid-area: 1 / 1; visibility: hidden; }
+.cs-pane.on { visibility: visible; }
 .cs-entry-body .cs-pane h4 {
   font-size: 1.05rem; font-weight: 800; color: var(--accent);
   letter-spacing: 0.06em; margin: 0 0 8px;
