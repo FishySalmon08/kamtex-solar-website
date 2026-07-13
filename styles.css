@@ -110,8 +110,8 @@ section { padding: 88px 0; }
 /* Stat band */
 .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 40px 0; }
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
-.stat b { display: block; font-size: 2rem; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; }
-.stat span { font-size: 0.92rem; color: var(--muted); }
+.stat b { display: block; font-size: 2rem; font-weight: 800; color: #000; letter-spacing: -0.02em; }
+.stat > span { font-size: 0.92rem; color: #000; }
 
 /* Split section */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
