@@ -4,7 +4,15 @@ Static prototype site for Kamtex Solar (off-grid B2B solar, Singapore). No build
 
 - `index.html` - home (hero, trust band, stats, about, industries, custom solutions, case-study teasers, testimonials, history, maintenance)
 - `case-studies.html` - 11 case studies with photo carousels and challenge/solution flippers
-- `products.html` - product catalogue categories
+- `products.html` - product catalogue hub; each category card links to a detail page
+- Product category detail pages (real items from solar.kamtexindustries.com):
+  - `solar-panels.html` - Kamtex KMX + Sharp modules
+  - `charge-controllers.html` - Phocos PWM + Morningstar MPPT
+  - `batteries.html` - Firstpower, Trojan, Kamtex LiFePO4
+  - `inverters.html` - PowerMaster, Phocos, Morningstar pure sine wave
+  - `lighting.html` - solar street/garden/batten + LED flood/bulb lighting
+  - `mounting.html` - aluminium/stainless mounting for all roof and ground types
+  - `cables-connectors.html` - 1500V PV cable, MC4/MC3, junction boxes
 - `quote.html` - multi-step quote request form (composes an email to kamtex@kamtexindustries.com)
 - `assets/` - logo and photos extracted from the Kamtex pitch and monthly case-study decks
 

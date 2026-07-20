@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mounting Systems | KamtexSolar</title>
+<meta name="description" content="Aluminium and stainless-steel solar mounting systems for tile, flat, metal-seam, trapezoidal and ground installations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/logo.png">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="assets/logo.png" alt="KamtexSolar, your one-stop solar provider"></a>
+    <button class="nav-toggle" aria-label="Toggle menu">Menu</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="quote.html" class="btn btn-primary">Request a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <div class="section-head cat-intro">
+      <span class="eyebrow"><a href="products.html" style="color:var(--muted)">Products</a> &rsaquo; Mounting Systems</span>
+      <h1>Solar Panel Mounting Systems</h1>
+      <p>Using quality aluminium and stainless steel, our mounting systems are economical, practical and reliable. The flexibility of the system means it caters to almost all installation types &mdash; from tiled roofs to open ground.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:44px">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Installation types we cover</h2>
+    </div>
+    <div class="grid-3">
+      <div class="tile reveal"><h3>Tile Roofs</h3><p>Tile hooks and rails that fix securely without cracking the roof covering.</p></div>
+      <div class="tile reveal"><h3>Flat Roofs</h3><p>Ballasted and tilted frames that set the optimum angle on flat surfaces.</p></div>
+      <div class="tile reveal"><h3>Metal Seam Roofs</h3><p>Clamp-on rails for standing-seam metal roofs &mdash; no penetration required.</p></div>
+      <div class="tile reveal"><h3>Trapezoidal Roofs</h3><p>Low-profile mounts fixed to the crests of trapezoidal metal sheeting.</p></div>
+      <div class="tile reveal"><h3>Ground Mount</h3><p>Freestanding aluminium frames for ground arrays where roof space is limited.</p></div>
+      <div class="tile reveal"><h3>Custom structures</h3><p>Bespoke frames and poles engineered for jetties, containers and hazardous sites.</p></div>
+    </div>
+    <div class="split" style="margin-top:64px;align-items:center">
+      <img src="assets/jetty.jpg" alt="Solar array mounted on a jetty structure over water" loading="lazy" class="reveal">
+      <div class="reveal">
+        <h2>Built to last outdoors</h2>
+        <p class="lead">Aluminium and stainless-steel components resist corrosion in coastal and industrial environments, so the array stays secure for the life of the system.</p>
+        <ul class="checklist">
+          <li>Corrosion-resistant aluminium and stainless steel</li>
+          <li>Pre-engineered rails and clamps for fast installation</li>
+          <li>Wind and load rated for local conditions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div>
+      <h2>Mounting an array?</h2>
+      <p>Tell us your roof or ground type and panel count and we will spec the mounting kit.</p>
+    </div>
+    <a class="btn btn-primary" href="quote.html">Request a Quote</a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <img class="foot-logo" src="assets/logo.png" alt="KamtexSolar">
+      <p>37 Tannery Lane, #07-02 Tannery House,<br>Singapore 347790</p>
+      <p style="margin-top:10px"><a href="tel:+6567445307">+65 6744 5307</a></p>
+      <p><a href="mailto:kamtex@kamtexindustries.com">kamtex@kamtexindustries.com</a></p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="products.html">Products</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="index.html#custom">Customised Solutions</a>
+      <a href="index.html#maintenance">Maintenance &amp; Repair</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#history">Our History</a>
+      <a href="https://solar.kamtexindustries.com">solar.kamtexindustries.com</a>
+    </div>
+    <div class="legal">KamtexSolar, a division of Kamtex Industries. Prototype website, content subject to confirmation.</div>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function () {
+  document.querySelector('.nav-links').classList.toggle('open');
+});
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+}
+</script>
+</body>
+</html>

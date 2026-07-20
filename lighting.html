@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Lighting | KamtexSolar</title>
+<meta name="description" content="Solar street lights, garden lights, batten lights, LED floodlights and bulbs for perimeter-to-workface coverage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/logo.png">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="assets/logo.png" alt="KamtexSolar, your one-stop solar provider"></a>
+    <button class="nav-toggle" aria-label="Toggle menu">Menu</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="quote.html" class="btn btn-primary">Request a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <div class="section-head cat-intro">
+      <span class="eyebrow"><a href="products.html" style="color:var(--muted)">Products</a> &rsaquo; Solar Lighting</span>
+      <h1>Solar Lighting</h1>
+      <p>Solar lighting is environmentally friendly, easy to install and delivers tremendous light output. Our modern designs suit everything from perimeter security to public walkways &mdash; with no trenching or grid connection needed.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:44px">
+  <div class="wrap">
+    <div class="cat-list">
+      <div class="cat-item reveal">
+        <img class="photo" src="assets/lighting.jpg" alt="Solar-powered light illuminating a walkway at night">
+        <div class="cat-body">
+          <span class="brandtag">Kamtex Solar</span>
+          <h3>KMX-SSL Solar Street Light</h3>
+          <p>High-brightness multi-chip LED street light with top pole-mounted solar panels and a plug-and-play design. Available in cool white or warm white, with optional timer and dusk-to-dawn control.</p>
+          <div class="cat-chips">
+            <span><b>15W &ndash; 30W LED</b></span>
+            <span>Cool / warm white</span>
+            <span>Pole-mounted panels</span>
+            <span>Dusk-to-dawn option</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top:56px">
+      <h2>More lighting we carry</h2>
+      <p>Full specifications available on request &mdash; tell us the area and mounting and we will recommend a fixture.</p>
+    </div>
+    <div class="grid-3">
+      <div class="tile reveal"><h3>Solar Batten Lights</h3><p>Indoor and sheltered-area battens for site offices, stores and rest areas.</p></div>
+      <div class="tile reveal"><h3>Solar Garden Lights</h3><p>Low-level path and landscape lighting for grounds, parks and walkways.</p></div>
+      <div class="tile reveal"><h3>LED Floodlights</h3><p>Wide-area flood coverage for yards, signage and security lighting.</p></div>
+      <div class="tile reveal"><h3>LED Light Bulbs</h3><p>Efficient DC and AC bulbs to retrofit existing fittings on solar power.</p></div>
+      <div class="tile reveal"><h3>LED Street Lights</h3><p>Grid-tied LED street lighting where mains power is already available.</p></div>
+      <div class="tile reveal"><h3>Custom fixtures</h3><p>Bespoke solar lighting engineered around your site and pole layout.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div>
+      <h2>Lighting a site or perimeter?</h2>
+      <p>Send us the area, pole spacing and run hours and we will spec the fixtures and solar sizing.</p>
+    </div>
+    <a class="btn btn-primary" href="quote.html">Request a Quote</a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <img class="foot-logo" src="assets/logo.png" alt="KamtexSolar">
+      <p>37 Tannery Lane, #07-02 Tannery House,<br>Singapore 347790</p>
+      <p style="margin-top:10px"><a href="tel:+6567445307">+65 6744 5307</a></p>
+      <p><a href="mailto:kamtex@kamtexindustries.com">kamtex@kamtexindustries.com</a></p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="products.html">Products</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="index.html#custom">Customised Solutions</a>
+      <a href="index.html#maintenance">Maintenance &amp; Repair</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#history">Our History</a>
+      <a href="https://solar.kamtexindustries.com">solar.kamtexindustries.com</a>
+    </div>
+    <div class="legal">KamtexSolar, a division of Kamtex Industries. Prototype website, content subject to confirmation.</div>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.nav-toggle').addEventListener('click', function () {
+  document.querySelector('.nav-links').classList.toggle('open');
+});
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+} else {
+  document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+}
+</script>
+</body>
+</html>
